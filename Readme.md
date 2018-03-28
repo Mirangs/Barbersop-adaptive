@@ -1,1 +1,1 @@
-Hello adaptive Barbershop!
+Barbershop adaptive!
