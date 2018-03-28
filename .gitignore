@@ -1,6 +1,7 @@
 node_modules/
-Thumbs.db
 psd/
+build/
+Thumbs.db
 *.editorconfig
 *.log
 *.ai
