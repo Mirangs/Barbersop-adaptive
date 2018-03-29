@@ -1,7 +1,6 @@
 node_modules/
 psd/
 build/
-*.editorconfig
 *.log
 *.ai
 css/*.css
