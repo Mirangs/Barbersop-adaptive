@@ -17,6 +17,7 @@
     "gulp-sass": "^3.2.1",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.1",
+    "node-normalize-scss": "^3.0.0",
     "run-sequence": "^2.2.1"
   },
   "scripts": {
