@@ -1,8 +1,29 @@
 .page-header {
+  flex-direction: column;
   min-height: 395px;
   &__logo {
     min-height: 85px;
-    outline: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
   }
-  outline: 1px solid white;
+}
+
+@media ($tablet-widths) {
+  .page-header {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 400px + 70px;
+
+    &__logo {
+      height: 400px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .page-header {
+    min-height: 650px + 70px;
+    &__logo {
+      height: 650px;
+    }
+  }
 }

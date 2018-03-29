@@ -65,7 +65,15 @@ gulp.task("serve", function() {
 	});
 
 	gulp.watch("sass/**/*.scss", ["style"]);
-	gulp.watch("*.html").on("change", server.reload);
+	gulp.watch("*.html").on("change", function() {
+    return gulp.src([
+      "*.html"
+      ], {
+        base: "."
+      })
+    .pipe(gulp.dest("build"));
+  });
+  gulp.watch("*.html").on("change", server.reload);
 });
 
 gulp.task("copy", function() {

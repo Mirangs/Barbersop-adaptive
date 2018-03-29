@@ -1,0 +1,55 @@
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+
+  &__user-items {
+    min-height: 55px;
+    outline: 1px solid white;
+  }
+
+  &__items {
+    min-height: 255px;
+    outline: 1px solid white;
+  }
+
+  &__items,
+  &__user-items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  }
+}
+
+@media ($tablet-widths) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+    min-height: 70px;
+
+    &__wrapper {
+      @include container;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__items {
+      width: 570px;
+      min-height: 70px;
+    }
+
+    &__user-items {
+      width: 60px;
+      min-height: 70px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .main-nav__items {
+    width: 780px;
+  }
+
+  .main-nav__user-items {
+    width: 160px;
+  }
+}

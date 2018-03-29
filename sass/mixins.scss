@@ -1,4 +1,4 @@
-@mixin clearfix() {
+@mixin clearfix {
   &::after {
     content: "";
 
@@ -7,7 +7,7 @@
   }
 }
 
-@mixin container() {
+@mixin container {
   width: 320px;
   margin: 0 auto;
 
