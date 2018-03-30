@@ -1,8 +1,8 @@
 .advantages__wrapper {
   @include container;
-  min-height: 320px;
-  padding-top: 30px;
-  outline: 1px solid white;
+  min-height: 325px;
+  padding-top: 80px;
+
 }
 
 .advantages__items {
@@ -12,11 +12,10 @@
 }
 
 .advantages__item {
-  outline: 1px solid white;
-  min-height: 145px;
-  margin-bottom: 23px;
+  min-height: 150px;
   padding: 0 44px;
   padding-top: 125px;
+  padding-bottom: 23px;
 
   &:nth-child(n+2) {
     display: none;

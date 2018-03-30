@@ -2,14 +2,16 @@
   width: 320px;
   margin: 0 auto;
 
+  &--closed {
+    display: none;
+  }
+
   &__user-items {
     min-height: 55px;
-    outline: 1px solid white;
   }
 
   &__items {
     min-height: 255px;
-    outline: 1px solid white;
   }
 
   &__items,
