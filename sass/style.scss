@@ -2,10 +2,11 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "scaffolding.scss";
-@import "mixins.scss";
 
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/statistics.scss";
 @import "blocks/advantages.scss";
 @import "blocks/news.scss";
+
+@import "global/fonts.scss";
