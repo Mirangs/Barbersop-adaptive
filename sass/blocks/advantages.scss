@@ -1,8 +1,19 @@
-.advantages__wrapper {
-  @include container;
-  min-height: 325px;
-  padding-top: 80px;
+.advantages {
+  position: relative;
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-image: url(../img/corner-darkgrey.svg);
+  }
+}
+
+.advantages__wrapper {
+  @include container-fluid;
+  position: relative;
+  padding-top: 80px;
 }
 
 .advantages__items {
