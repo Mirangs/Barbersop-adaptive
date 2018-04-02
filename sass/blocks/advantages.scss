@@ -7,30 +7,106 @@
     width: 100%;
     height: 35px;
     background-image: url(../img/corner-darkgrey.svg);
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
   }
+}
+
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider .slider__item {
+  display: none;
+}
+
+#advantages-input-1:checked ~ .advantages__items .advantages__item--fast,
+#advantages-input-2:checked ~ .advantages__items .advantages__item--cool,
+#advantages-input-3:checked ~ .advantages__items .advantages__item--expensive {
+  display: block;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.slider__toggle {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+#advantages-input-1:checked ~ .advantages__toggles label[for="advantages-input-1"],
+#advantages-input-2:checked ~ .advantages__toggles label[for="advantages-input-2"],
+#advantages-input-3:checked ~ .advantages__toggles label[for="advantages-input-3"], {
+  background-color: #ffffff;
 }
 
 .advantages__wrapper {
   @include container-fluid;
   position: relative;
-  padding-top: 80px;
 }
 
 .advantages__items {
+  display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .advantages__item {
-  min-height: 150px;
+  position: relative;
   padding: 0 44px;
   padding-top: 125px;
-  padding-bottom: 23px;
+  margin-bottom: 23px;
 
-  &:nth-child(n+2) {
-    display: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 95px;
+    transform: translateX(-50%);
   }
+
+  &--fast::before {
+    height: 94px;
+    background-image: url("../img/advantage-1-illustration.svg");
+  }
+
+  &--cool::before {
+    height: 88px;
+    background-image: url("../img/advantage-2-illustration.svg");
+  }
+
+  &--expensive::before {
+    height: 91px;
+    background-image: url("../img/advantage-3-illustration.svg");
+  }
+}
+
+.advantages__item-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 43px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages__item p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
 }
 
 @media ($tablet-widths) {
@@ -39,16 +115,40 @@
   }
 
   .advantages__items {
-    padding-bottom: 4px;
+    flex-direction: column;
   }
 
   .advantages__item {
-    min-height: 95px;
     margin: 0 30px;
-    margin-bottom: 40px;
+    margin-bottom: 27px;
     padding: 0;
     padding-bottom: 39px;
     padding-left: 128px;
+    border-bottom: 1px solid #4a4a4a;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      left: 0;
+      top: 13px;
+      transform: translateX(0);
+    }
+  }
+
+  .advantages__item-title {
+    margin: 0;
+    margin-bottom: 13px;
+    text-align: left;
+  }
+
+  .advantages__item p {
+    text-align: left;
+  }
+
+  .advantages__toggles {
+    display: none;
   }
 
   .advantages__item:nth-child(n+2) {
@@ -61,6 +161,10 @@
 }
 
 @media ($desktop-widths) {
+  .advantages::after {
+    height: 66px;
+  }
+
   .advantages__wrapper {
     min-height: 275px;
     padding-top: 75px;
@@ -68,27 +172,39 @@
   }
 
   .advantages__items {
-    display: table;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     width: 100%;
     height: 275px;
     padding-bottom: 0;
   }
 
   .advantages__item {
-    display: table-cell;
     width: 240px;
     margin: 0;
     padding: 0 40px;
-    padding-top: 130px;
+    padding-top: 115px;
+    border-bottom: none;
+    border-right: 1px solid #4a4a4a;
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:last-child {
+      border-right: none;
+    }
   }
 
-  .advantages__item:nth-child(n+2) {
-    display: table-cell;
+  .advantages__item-title,
+  .advantages__item p {
+    text-align: center;
   }
 
-  .advantages__item:nth-child(2) {
-    width: 200px;
-    padding-left: 60px;
-    padding-right: 60px;
+  .advantages__item-title {
+    margin-bottom: 17px;
   }
 }
