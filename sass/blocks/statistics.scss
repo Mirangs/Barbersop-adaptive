@@ -1,6 +1,7 @@
 .stats {
   @include container-fluid;
   margin-bottom: 25px;
+  background-color: #242424;
 
   &__header {
     padding-top: 27px;
