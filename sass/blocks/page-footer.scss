@@ -1,0 +1,208 @@
+.page-footer {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.page-footer__wrapper {
+  @include container-fluid;
+  padding-top: 70px;
+  padding-bottom: 24px;
+}
+
+.page-footer__contacts {
+  margin: 25px 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.page-footer__contacts b {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.page-footer__contacts br {
+  display: none;
+}
+
+.page-footer__contacts-hidden {
+  font-size: 0;
+}
+
+.page-footer__contacts a {
+  margin-top: 20px;
+  color: #ffffff;
+  border-color: #3e3e3e;
+
+  &:hover {
+    border-color: #515151;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #252525;
+    filter: opacity(0.3);
+  }
+}
+
+.page-footer__social {
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.page-footer__social-title {
+  display: none;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  border: 1px solid #3f3f3f;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--vk {
+    background-image: url("../img/vk-icon-big.png");
+  }
+
+  &--fb {
+    background-image: url("../img/facebook-icon-big.png");
+  }
+
+  &--in {
+    background-image: url("../img/insta-icon-big.png");
+  }
+
+  &:hover {
+    border-color: #545454;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #2c2c2c;
+    border-color: #343433;
+    filter: opacity(0.3);
+  }
+}
+
+.page-footer__copyright {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.page-footer__copyright-link {
+  margin-top: 15px;
+  color: #ffffff;
+  border-color: #3f3f3f;
+
+  &:hover {
+    border-color: #545454;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #2c2c2c;
+    border-color: #343433;
+    filter: opacity(0.3);
+  }
+}
+
+@media ($tablet-widths) {
+  .page-footer__wrapper {
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .page-footer__contacts {
+    padding-right: 160px;
+    margin: 0;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+
+  .page-footer__contacts a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: left;
+    font-weight: normal
+  }
+
+  .page-footer__contacts b {
+    text-transform: uppercase;
+  }
+
+  .page-footer__copyright {
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+}
+
+@media ($desktop-widths) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 60px;
+    align-items: center;
+  }
+
+  .page-footer__copyright {
+    position: static;
+  }
+
+  .page-footer__contacts {
+    margin: 0;
+    padding: 0;
+    margin-right: 7%;
+  }
+
+  .page-footer__social {
+    margin: auto 0;
+  }
+
+  .page-footer__social-title {
+    margin-bottom: 12px;
+  }
+
+  .page-footer__copyright {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--vk {
+    background-image: url("../img/vk-icon-small.png");
+    }
+
+    &--fb {
+    background-image: url("../img/facebook-icon-small.png");
+    }
+
+    &--in {
+    background-image: url("../img/insta-icon-small.png");
+    }
+  }
+
+  .page-footer__social-title {
+    display: block;
+  }
+}
