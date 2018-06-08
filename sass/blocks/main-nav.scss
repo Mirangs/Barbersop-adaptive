@@ -246,6 +246,10 @@
       margin-right: 20px;
     }
 
+    &__item {
+      margin-right: 10px;
+    }
+
     &__item a {
       padding: 0;
       padding-top: 25px;
@@ -325,9 +329,12 @@
     left: 30px;
   }
 
+  .main-nav__item {
+    flex-grow: 1;
+  }
+
   .main-nav__item a {
-    padding-right: 31px;
-    padding-left: 31px;
+    text-align: center;
   }
 
   .main-nav__item a[href] {
