@@ -4,3 +4,4 @@ build/
 *.log
 *.ai
 css/*.css
+.tmp.drivedownload/
